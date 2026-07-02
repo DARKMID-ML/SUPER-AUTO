@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-brand-red: #C41E3A;
+  --color-brand-red-dark: #9e0027;
+  --color-brand-blue: #1E3A8A;
+  --color-brand-blue-dark: #0F172A;
+  --color-brand-light: #fff8f7;
+  --color-brand-surface: #FAFAFA;
+  --color-text-primary: #271718;
+  --color-text-secondary: #5b4040;
+  --color-text-muted: #8f6f6f;
+  --color-border-standard: #e3bebd;
+  --color-border-light: #f9dcdb;
+
+  /* Fonts */
+  --font-heading: 'Epilogue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-icons: 'Material Symbols Outlined', sans-serif;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-modal: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* Animations */
+  --animate-ken-burns: ken-burns 20s ease-in-out infinite alternate;
+  --animate-bounce-slow: bounce-slow 3s ease-in-out infinite;
+}
+
+@keyframes ken-burns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+}
