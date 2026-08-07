@@ -1,4 +1,5 @@
 // 1. Importer React et les hooks nécessaires
+import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import superlogo from '../assets/logo_super_Auto.png'
 
@@ -56,13 +57,7 @@ export default function Navbar() {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => (
-                            <a
-                                key={link.href}
-                                href={link.href}
-                                className="text-text-primary hover:text-brand-red transition-colors font-medium"
-                            >
-                                {link.name}
-                            </a>
+                            <Link key={link.href} to={link.href}>{link.name}</Link>
                         ))}
                     </div>
 
@@ -92,14 +87,14 @@ export default function Navbar() {
                 <div className="md:hidden bg-white border-t border-border-standard">
                     <div className="px-4 pt-2 pb-4 space-y-1">
                         {navLinks.map((link) => (
-                            <a
+                            <Link
                                 key={link.href}
-                                href={link.href}
+                                to={link.href}
                                 className="block px-3 py-2 text-base font-medium text-text-primary hover:text-brand-red"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {link.name}
-                            </a>
+                            </Link>
                         ))}
                         <button className="w-full mt-4 bg-brand-red hover:bg-brand-red-dark text-white font-bold py-2 px-4 rounded transition-colors">
                             Essaie gratuit

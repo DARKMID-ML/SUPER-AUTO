@@ -1,13 +1,19 @@
-import './App.css'
+import { Routes,Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Acceuil from './pages/Acceuil'
+import Contact from './pages/Contact'
+import Services from './pages/Services.tsx'
 
 export default function App() {
   return (
-    <div>
+    <div className=''>
       <Navbar />
-      <Acceuil />
+      <Routes >
+        <Route path="/" element={<Acceuil />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
       <Footer/>
     </div>
   )

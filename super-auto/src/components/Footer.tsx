@@ -1,18 +1,19 @@
+import { Link } from 'react-router-dom'
 import superlogo from '../assets/logo_super_Auto.png'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const quickLinks = [
-    { name: 'Accueil', href: '/' },
-    { name: 'Vente', href: '/vente' },
-    { name: 'Location', href: '/location' },
-    { name: 'Transit', href: '/transit' },
-    { name: 'Services', href: '/services' },
+    { name: 'Accueil', to: '/' },
+    { name: 'Vente', to: '/vente' },
+    { name: 'Location', to: '/location' },
+    { name: 'Transit', to: '/transit' },
+    { name: 'Services', to: '/services' },
   ]
 
   return (
-    <footer className="bg-brand-blue-dark bottom-0 left-0 right-0 z-50 text-white mt-auto">
+    <footer className="bg-brand-blue-dark text-white mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Colonne 1: Logo + Description + Copyright */}
@@ -36,13 +37,13 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">Liens Rapides</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import ImageHero from "../assets/voiture.jpg"
 
 export default function Acceuil() {
@@ -42,10 +43,10 @@ export default function Acceuil() {
                         </div>
                         <h3 className="text-xl font-bold text-gray-800 mb-3">Vente et Achat de Voitures</h3>
                         <p className="text-text-secondary leading-relaxed flex-grow">Nous achetons et vendons une large gamme de véhicules d'occasion de qualité, soigneusement sélectionnés pour répondre à vos besoins.</p>
-                        <a href="#services" className="text-brand-red hover:text-brand-red-dark font-semibold inline-flex items-center gap-2 mt-6 mb-2 transition-colors">
+                        <Link to="/services" className="text-brand-red hover:text-brand-red-dark font-semibold inline-flex items-center gap-2 mt-6 mb-2 transition-colors">
                             En savoir plus
                             <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Carte 2 - Location */}
